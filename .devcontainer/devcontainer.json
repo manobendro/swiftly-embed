@@ -38,5 +38,5 @@
   "forwardPorts": [],
 
   // Use 'postAttachCommand' to run commands after successfully attaching to the container.
-  "postAttachCommand": ". \"${SWIFTLY_HOME_DIR:-$HOME/.local/share/swiftly}/env.sh\" && hash -r"
+  "postAttachCommand": "./swiftly/swiftly init --quiet-shell-followup -y && . \"${SWIFTLY_HOME_DIR:-$HOME/.local/share/swiftly}/env.sh\" && hash -r"
 }

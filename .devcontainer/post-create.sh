@@ -22,7 +22,7 @@ curl -o swiftly/swiftly-$(uname -m).tar.gz https://download.swift.org/swiftly/li
 # Extract swiftly archive
 tar zxf swiftly/swiftly-$(uname -m).tar.gz -C swiftly
 # Install swift language
-./swiftly/swiftly init --quiet-shell-followup -y
+# ./swiftly/swiftly init --quiet-shell-followup -y
 
 # Clone any necessary repositories or submodules
 echo "📥 Initializing git submodules..."
