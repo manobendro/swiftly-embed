@@ -1,0 +1,42 @@
+{
+  "name": "Swiftly Embed Development",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  
+  // Features to install
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "installOhMyZsh": true,
+      "upgradePackages": true
+    },
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest"
+    }
+  },
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // This runs only once when the container is first created.
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+
+  // Use 'postStartCommand' to run commands each time the container starts.
+  "postStartCommand": "bash .devcontainer/init.sh",
+
+  // Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [],
+
+  // Use 'postAttachCommand' to run commands after successfully attaching to the container.
+  "postAttachCommand": "echo '✨ Codespace is ready!'"
+}
