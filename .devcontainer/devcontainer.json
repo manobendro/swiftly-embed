@@ -1,12 +1,12 @@
 {
-  "name": "Swiftly Embed Development",
+  "name": "Swiftly Embeded Development",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   
   // Features to install
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
       "installZsh": true,
-      "installOhMyZsh": true,
+      // "installOhMyZsh": true,
       "upgradePackages": true
     },
     "ghcr.io/devcontainers/features/git:1": {
@@ -38,5 +38,5 @@
   "forwardPorts": [],
 
   // Use 'postAttachCommand' to run commands after successfully attaching to the container.
-  "postAttachCommand": "echo '✨ Codespace is ready!'"
+  "postAttachCommand": ". \"${SWIFTLY_HOME_DIR:-$HOME/.local/share/swiftly}/env.sh\" && hash -r"
 }
